@@ -4,7 +4,7 @@ Leonard Laszlo
 *All rights reserved. Do not print without the permission of the author!*
 
 I am a computer engineer specialised in the development of Java backend systems, interested in Kotlin application development as well.
-I like challenges and finding pragmatic solutions for complex problems, have ownership and be part of the development process from the conception of the requirements to the deployment to production.
+I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production.
 I'm committed to clean code and I think it is essential for building quality software.
 
 

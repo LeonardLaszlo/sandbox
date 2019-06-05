@@ -1,9 +1,7 @@
 Leonard Laszlo
 ----------------
 
-I am a computer engineer specialised in the development of Java backend systems, interested in Kotlin application development as well.
-I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production.
-I'm committed to clean code and I think it is essential for building quality software.
+I am a computer engineer specialised in the development of Java backend systems, interested in Kotlin application development as well. I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production. I'm committed to clean code and I think it is essential for building quality software.
 
 
 Experience
@@ -24,7 +22,7 @@ Buzzwords:
 
 - Java 7 and 8, Bash, AWS (SNS, SES, SQS S3, EC2, RDS, Cloud formation)
 - Spring, Maven, Git, Circle CI, Vert.x (v2.x)
-- Postgresql, Guice, Junit, Hamcrest
+- PostgreSQL, Guice, Junit, Hamcrest
 
 #### 2016-2017 [evosoft Hungary Kft.][evosoft], Budapest
 
@@ -32,7 +30,7 @@ At evosoft I worked on the [MindSphere][mindsphere] project. I quickly got respo
 
 - Java 8, Node.js, Spring (core, boot, cloud, data, security, hateoas, amqp)
 - Cloud Foundry, Gradle, Git, Gitlab CI
-- MongoDB, Postgresql, RabbitMQ, Redis, TestNG
+- MongoDB, PostgreSQL, RabbitMQ, Redis, TestNG
 - test-driven development, pair programming and custom agile processes
 
 #### 2014 [Siwena Kft.][siwena], Budapest

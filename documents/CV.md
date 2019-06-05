@@ -1,8 +1,6 @@
 Leonard Laszlo
 ----------------
 
-*All rights reserved. Do not print without the permission of the author!*
-
 I am a computer engineer specialised in the development of Java backend systems, interested in Kotlin application development as well.
 I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production.
 I'm committed to clean code and I think it is essential for building quality software.
@@ -14,18 +12,25 @@ Experience
 
 #### 2017-2019 [SimpledCard Hungary Kft.][simpledcard], Budapest
 
-My role at SimpledCard was to develop new features and maintain the backend systems. We worked in a small development team with skilled developers. Here I learned a lot about software development practices and how crucial is the transparency for reliable development. I loved the thorough reviewing processes, because every developer needed to make reviews and all code needed to be reviewed. Buzzwords:
+SimpledCard is an enterprise payment solution, were I:
 
-- Java 7 and 8. During my time at SimpledCard I upgraded all java 7 systems to java 8
-- Spring, Maven, Git, Circle CI, Vert.x v2.x
-- Postgresql, Guice, Junit, Hamcrest, Bash
-- monolith core services + continuous migration to Spring boot AWS microservices
+- planned and developed new backend features,
+- improved the existing system by fixing bugs,
+- optimised the system for high loads,
+- participated in migration towards microservices and technological upgrades
+- loved the thorough reviewing processes.
+
+Buzzwords:
+
+- Java 7 and 8, Bash, AWS (SNS, SES, SQS S3, EC2, RDS, Cloud formation)
+- Spring, Maven, Git, Circle CI, Vert.x (v2.x)
+- Postgresql, Guice, Junit, Hamcrest
 
 #### 2016-2017 [evosoft Hungary Kft.][evosoft], Budapest
 
-At evosoft I worked on a project called [MindSphere][mindsphere]. I quickly got responsible for tailoring a 3rd party Node.js gateway application to our needs. Later we started the development of our own spring cloud based API gateway. I also had the opportunity to practice mentoring, lecturing and continuously develop my soft skills. Buzzwords:
+At evosoft I worked on the [MindSphere][mindsphere] project. I quickly got responsible for tailoring a 3rd party Node.js gateway application to our needs. Later we started the development of our own high performance spring cloud based API gateway. I also had the opportunity to practice mentoring, lecturing and continuously develop my soft skills. Buzzwords:
 
-- Java 8, Spring (core, boot, cloud, data, security, hateoas, amqp)
+- Java 8, Node.js, Spring (core, boot, cloud, data, security, hateoas, amqp)
 - Cloud Foundry, Gradle, Git, Gitlab CI
 - MongoDB, Postgresql, RabbitMQ, Redis, TestNG
 - test-driven development, pair programming and custom agile processes

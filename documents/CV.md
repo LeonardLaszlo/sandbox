@@ -73,7 +73,6 @@ Contact
 - Email address: *bGVvbmFyZC5sYXN6bG9AZ21haWwuY29t*
 - Phone number: *KzM2IDcwIDU5MSAyMDgy*
 
-[the-five-dysfunctions-of-a-team]: https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756
 [simpledcard]: https://www.simpledcard.com/en/
 [mindsphere]: https://siemens.mindsphere.io/en
 [evosoft]: https://www.evosoft.hu/

@@ -7,6 +7,7 @@ I am a computer engineer specialised in the development of Java backend systems,
 Experience
 ----------
 
+#### 2019 [Move Digital AG][movedigital], Zurich
 
 #### 2017-2019 [SimpledCard Hungary Kft.][simpledcard], Budapest
 
@@ -73,6 +74,7 @@ Contact
 - Email address: *bGVvbmFyZC5sYXN6bG9AZ21haWwuY29t*
 - Phone number: *KzM2IDcwIDU5MSAyMDgy*
 
+[movedigital]: https://www.movedigital.ch/en/
 [simpledcard]: https://www.simpledcard.com/en/
 [mindsphere]: https://siemens.mindsphere.io/en
 [evosoft]: https://www.evosoft.hu/

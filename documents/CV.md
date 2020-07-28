@@ -1,40 +1,41 @@
 Leonard Laszlo
 ----------------
 
-I am a computer engineer specialised in the development of Java backend systems, interested in Kotlin application development as well. I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production. I'm committed to clean code and I think it is essential for building quality software.
+I am a computer engineer working the development of Java backend systems, interested in Kotlin application development as well. I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production. I'm committed to clean code and I think it is essential for building quality software.
 
 
 Experience
 ----------
 
-#### 2019 [Move Digital AG][movedigital], Zurich
+#### Software engineer at [Move Digital AG][movedigital], Zurich (September 2019 - now)
 
-#### 2017-2019 [SimpledCard Hungary Kft.][simpledcard], Budapest
+Currently I am working on services for the banking sector, where I am using daily the following technologies:
 
-SimpledCard is an enterprise payment solution, were I:
+- Java 11, Spring Boot, Maven, Bash
+- Git, Github, Jenkins, Docker, Kubernetes
+- MariaDB, PostgreSQL, ArangoDB, RabbitMQ, MinIO, Redis
+- Elasticsearch, Logstash, Kibana, Beats
 
-- planned and developed new backend features,
-- improved the existing system by fixing bugs,
-- optimised the system for high loads,
-- participated in migration towards microservices and technological upgrades
-- loved the thorough reviewing processes.
+My responsibilities include the common aspects of feature development of backend systems, such as planning, coding, testing, deployment, reviewing and hiring process.
 
-Buzzwords:
+#### Software engineer at [SimpledCard Hungary Kft.][simpledcard], Budapest (October 2017 - February 2019)
+
+SimpledCard is an electronic payment solution for enterprise customers, were I planned and developed backend features, improved the existing system by fixing bugs, optimized the system for higher loads, participated in migration towards micro-services and technological upgrades and of course loved the thorough reviewing processes. Buzzwords:
 
 - Java 7 and 8, Bash, AWS (SNS, SES, SQS S3, EC2, RDS, Cloud formation)
 - Spring, Maven, Git, Circle CI, Vert.x (v2.x)
 - PostgreSQL, Guice, Junit, Hamcrest
 
-#### 2016-2017 [evosoft Hungary Kft.][evosoft], Budapest
+#### Senior software engineer at [evosoft Hungary Kft.][evosoft], Budapest (September 2016 - October 2017)
 
-At evosoft I worked on the [MindSphere][mindsphere] project. I quickly got responsible for tailoring a 3rd party Node.js gateway application to our needs. Later we started the development of our own high performance spring cloud based API gateway. I also had the opportunity to practice mentoring, lecturing and continuously develop my soft skills. Buzzwords:
+At evosoft I was responsible for the API gateway of the [MindSphere][mindsphere] project. Here I was promoted to the *Senior software engineer* position in April 2017. This job gave me the opportunity to practice mentoring, lecturing, team leading and continuously develop my skills. Buzzwords:
 
 - Java 8, Node.js, Spring (core, boot, cloud, data, security, hateoas, amqp)
 - Cloud Foundry, Gradle, Git, Gitlab CI
 - MongoDB, PostgreSQL, RabbitMQ, Redis, TestNG
 - test-driven development, pair programming and custom agile processes
 
-#### 2014 [Siwena Kft.][siwena], Budapest
+#### Software engineer at [Siwena Kft.][siwena], Budapest (July 2014 - November 2014)
 
 At Siwena we developed an application used to process data from cameras, motions detectors, locks and sensors. My task was the design of an SNMP communication module for SNMP compatible devices. Buzzwords:
 
@@ -61,9 +62,17 @@ Publications
 
 
 - [Porting Popcorn Time for ARMv7 Linux devices][popcorn-time-article], July 2015
-- *Forwarding Popcorn Time API calls through Tor network*,
-December 2015
+- *Forwarding Popcorn Time API calls through Tor network*, December 2015
 - *Multi-platform multimedia application development with NW.js framework*, December 2016, M.Sc. thesis
+
+Recommendations
+---------------
+
+Péter Módos (July 4, 2019, Péter managed Leonard directly)
+
+Building product and tech culture @ SimpledCard
+
+*Leonard worked in my team at SimpledCard as a java developer. He is very passionate about technology, he doesn't stop programming at the end of the working day, he keeps playing with new technologies also at home. As a result, he is quite up-to-date about new solutions and trends and he is happy to apply his ideas at work. He is constantly challenging the status quo, he is the driver of a lot of improvements. He likes to understand the business aspects of the work as well which would make him a productive and dedicated contributor of any software projects.*
 
 
 Contact
@@ -71,8 +80,12 @@ Contact
 
 - [https://github.com/LeonardLaszlo][github-user]
 - [https://www.linkedin.com/in/LeonardLaszlo][linkedin-contact]
-- Email address: *bGVvbmFyZC5sYXN6bG9AZ21haWwuY29t*
-- Phone number: *KzM2IDcwIDU5MSAyMDgy*
+- Email address: bGVvbmFyZC5sYXN6bG9AZ21haWwuY29t
+- Phone number: KzM2IDcwIDU5MSAyMDgy
+
+*Converted to PDF using https://atom.io/packages/markdown-to-pdf plugin for atom.*
+
+The original document is available at: https://github.com/LeonardLaszlo/sandbox/blob/master/documents/CV.md
 
 [movedigital]: https://www.movedigital.ch/en/
 [simpledcard]: https://www.simpledcard.com/en/

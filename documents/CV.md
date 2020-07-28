@@ -42,7 +42,7 @@ At Siwena we developed an application used to process data from cameras, motions
 - classic Java SE stack with swing-based client
 - MySQL, svn, ant
 
-#### 2013 Testware Kft., Budapest
+#### Testing engineer at Testware Kft., Budapest (2013)
 
 - module testing of Ada and C code running on self-driving trains, metros and trams
 
@@ -81,7 +81,7 @@ Contact
 - [https://github.com/LeonardLaszlo][github-user]
 - [https://www.linkedin.com/in/LeonardLaszlo][linkedin-contact]
 - Email address: bGVvbmFyZC5sYXN6bG9AZ21haWwuY29t
-- Phone number: KzM2IDcwIDU5MSAyMDgy
+- Phone number: KzQxIDc2IDIzMyAyNyA0Ng==
 
 *Converted to PDF using https://atom.io/packages/markdown-to-pdf plugin for atom.*
 

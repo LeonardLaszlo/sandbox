@@ -1,7 +1,7 @@
 Leonard Laszlo
 ----------------
 
-I am a computer engineer working the development of Java backend systems, interested in Kotlin application development as well. I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production. I'm committed to clean code and I think it is essential for building quality software.
+I am a computer engineer working on the development of Java backend systems, interested in Kotlin application development as well. I like challenges and finding pragmatic solutions for complex problems. I also like to have ownership and be part of the development process from the conception of the requirements to the deployment to production. I'm committed to clean code and I think it is essential for building quality software.
 
 
 Experience

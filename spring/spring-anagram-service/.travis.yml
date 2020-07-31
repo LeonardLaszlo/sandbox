@@ -1,0 +1,10 @@
+sudo: false
+language: java
+jdk: oraclejdk8
+notifications:
+  email: false
+addons:
+  sonarqube: true
+  apt:
+    packages: oracle-java8-installer
+script: ./gradlew clean build

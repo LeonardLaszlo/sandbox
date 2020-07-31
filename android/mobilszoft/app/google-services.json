@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "26196668555",
+    "project_id": "mobilszoft-1c96e"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26196668555:android:af5c4ae4328b9e48",
+        "android_client_info": {
+          "package_name": "hu.bme.aut.android.mobilszoft"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvbBBVNr1_NNNuuVkXtNQa4kSH_r5fcMc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-78068933-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

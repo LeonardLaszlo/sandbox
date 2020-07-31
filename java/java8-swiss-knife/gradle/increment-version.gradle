@@ -1,0 +1,47 @@
+task incrementVersion {
+    doLast {
+        String buildFileText = buildFile.getText()
+        String projectVersion = buildFileText.find(version.toString())
+
+        if (projectVersion == null) {
+            println "Could not find version in build file"
+        } else {
+            println "\nThe version of the project is: " + projectVersion
+            println "Which version do you want to increment?\n"
+
+            println "- major: 3"
+            println "- minor: 2"
+            println "- patch: 1\n"
+
+            def (major, minor, patch) = projectVersion.tokenize('.')
+            int option = new Scanner(System.in).nextInt()
+
+            switch (option) {
+                case 3:
+                    major = major.toInteger() + 1
+                    minor = 0
+                    patch = 0
+                    break
+                case 2:
+                    minor = minor.toInteger() + 1
+                    patch = 0
+                    break
+                case 1:
+                    patch = patch.toInteger() + 1
+                    break
+                default:
+                    println("Bad choice! Incrementation aborted")
+                    return
+            }
+
+            String newVersion = major + "." + minor + "." + patch
+            String s1 = "version '" + projectVersion + "'"
+            String s2 = "version '" + newVersion + "'"
+            String newFile = buildFileText.replace(s1, s2)
+
+            buildFile.setText(newFile)
+
+            println "New version was set successfully to: " + newVersion
+        }
+    }
+}

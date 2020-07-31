@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <!-- Needed for the CONSOLE_LOG_PATTERN property. It defines the pattern used by spring boot. We re-use it. -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <!-- Needed for the spring.application.name property.. -->
+    <property resource="application.yml"/>
+    <!-- Set the logging level for a specific package. -->
+    <logger name="org.codehaus.janino" level="info" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>UTF8</charset>
+        </encoder>
+    </appender>
+
+    <!-- Used for debugging. -->
+    <!-- Conditions provided by the org.codehaus.janino maven dependency. -->
+    <!-- If spring.profiles.active is set to local then this appender becomes active. -->
+    <if condition='property("spring.profiles.active").equals("local")'>
+        <!-- Used for debugging -->
+        <then>
+            <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>logs/${spring.application.name}.log</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <!-- daily rollover -->
+                    <fileNamePattern>logs/${spring.application.name}.%d{yyyy-MM-dd}.log</fileNamePattern>
+                    <!-- keep 30 days' worth of history capped at 3GB total size -->
+                    <maxHistory>30</maxHistory>
+                    <totalSizeCap>3GB</totalSizeCap>
+                </rollingPolicy>
+                <!-- The same encoder is used here as in ELK appender for debugging purposes. -->
+                <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                    <customFields>{"application_name":"${spring.application.name}","environment":"${environment}"}</customFields>
+                </encoder>
+            </appender>
+        </then>
+    </if>
+
+    <!-- Conditions provided by the org.codehaus.janino maven dependency -->
+    <!-- logstash.destination is expected to be provided at runtime -->
+    <if condition='isDefined("logstash.destination")'>
+        <then>
+            <appender name="ELK" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+                <!-- logstash.destination is expected to be provided at runtime -->
+                <destination>${logstash.destination}</destination>
+                <!-- Needed because a reverse proxy closes the connection if there is no activity for 30 seconds. -->
+                <keepAliveDuration>15 seconds</keepAliveDuration>
+                <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                    <!-- environment is expected to be provided at runtime -->
+                    <customFields>{"application_name":"${spring.application.name}","environment":"${environment}"}</customFields>
+                </encoder>
+            </appender>
+        </then>
+    </if>
+
+    <root level="trace">
+        <appender-ref ref="STDOUT"/>
+        <!-- Conditions provided by the org.codehaus.janino maven dependency -->
+        <if condition='property("spring.profiles.active").equals("local")'>
+            <then>
+                <!-- Used for debugging -->
+                <appender-ref ref="FILE" />
+            </then>
+        </if>
+        <!-- Conditions provided by the org.codehaus.janino maven dependency -->
+        <!-- logstash.destination is expected to be provided at runtime -->
+        <if condition='isDefined("logstash.destination")'>
+            <then>
+                <appender-ref ref="ELK" />
+            </then>
+        </if>
+    </root>
+</configuration>

@@ -1,0 +1,15 @@
+spring:
+  application:
+     name: anagram-service
+
+server:
+  port: 3333
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+authentication:
+  username: accountuser
+  password: 5f4dcc3b5aa765d61d8327deb882cf99

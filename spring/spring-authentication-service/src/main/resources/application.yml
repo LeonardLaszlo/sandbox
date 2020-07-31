@@ -1,0 +1,26 @@
+spring:
+  application:
+     name: authentication-service
+  datasource:
+        url: jdbc:postgresql://localhost:5432/accountdb
+        username: spring
+        password: spring
+        driver-class-name: org.postgresql.Driver    
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp_use_jdbc_metadata_defaults: false
+
+server:
+  port: 2222
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+authentication:
+  username: accountuser
+  password: 5f4dcc3b5aa765d61d8327deb882cf99

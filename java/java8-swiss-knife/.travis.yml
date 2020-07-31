@@ -1,0 +1,12 @@
+sudo: false
+language: java
+jdk: oraclejdk8
+notifications:
+  email: false
+addons:
+  sonarqube: true
+  apt:
+    packages: oracle-java8-installer
+script: ./gradlew clean sonarqube build -Dsonar.organization=leonardlaszlo-github -Dsonar.host.url=https://sonarqube.com -Dsonar.forceAuthentication=true -Dsonar.login=$SONAR_LOGIN
+env:
+  secure: R4xcArVpeAtFGvFMbe52+8YOh4JixJpCgObxyiDW65L54FIvQnyxfh1K2WN1Dvm+KBIT19F4g/ivniPzsVvP4VZjm++LH3rKBz2IPcK+No+SKnG82eWc27KsPNj3Dku3w9KF3C26XCBjKquwi7WjK7CbCysSLVMD7fDRBrIpVFp+NvPmLMuZYFOn5d8V0+Z+w2twryf/7emUNNh1mF3PWdcjGULI/X1hu8SQPP1SkPX6Bg9VYVAMf7uxzjSv3HYgXxWyYxdymTACQTpkd2q3jVcsv4rHrj16kn9GYsKToCXBIdkRGDsnlenauofWN06x+ZWh01lJ7tbuTVy0KUxlgBYeGRbitmqt8Z3meNsuVg1Rptim+uIFW+Zh61VuHdZZ2s2ptK/O5vjH7RJg4RqKKU6giYmrzRhR8d1jCZZ7uHmT0FeA75GkLvjYTCl+7kGM0QWruw3uDkeyaRViH2qyu8TBoSxjEwkEJY809VVZ1Jarsimo4nyNXQcgllTXF/EgimokYF5il7tqSkDJDagApz1/s99p40h/JGC1RuZgWMpF61iBBMbuH0/MErkFzm66cMSdliIMPb7us+w11w/tgV3ExNdKSdqJhgHqQofakZaXM2Vedo3QSnjmf/83MnjJjd7Bg63WpxzxLJ4YY4jtVjUPbFKg23Res+8wwD1iRbE=

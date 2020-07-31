@@ -1,0 +1,46 @@
+plugins {
+    id "org.sonarqube" version "2.3"
+}
+
+group 'hu.java.eight'
+version '0.1.1'
+
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'jacoco'
+
+apply from: rootProject.file('gradle/install-git-hooks.gradle')
+apply from: rootProject.file('gradle/increment-version.gradle')
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useTestNG {
+        parallel = 'classes'
+        threadCount = 4
+    }
+
+    testLogging {
+        showStandardStreams = true
+        events 'passed', 'skipped', 'failed'
+    }
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+build.dependsOn jacocoTestReport
+
+dependencies {
+    testCompile 'org.testng:testng:6.11'
+}

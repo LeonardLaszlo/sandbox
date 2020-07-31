@@ -1,0 +1,86 @@
+Odroid
+
+// For emmc run the following instructions at first boot. The emmc should be plugged with the sd adapter.
+cd /boot
+./sd_fusing.sh /dev/mmcblk0
+
+// change password for root and user with:
+passwd
+
+// setup access with public key
+copy public key in home folder
+cat id_rsa.pub > .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+
+// set hostname
+hostnamectl set-hostname Odroid-U3
+
+// time setup
+timedatectl set-ntp true
+timedatectl set-timezone Europe/Budapest
+
+// locale setup
+nano /etc/locale.gen
+locale-gen
+locale > /etc/locale.conf
+
+// configure firewall
+systemctl enable iptables.service 
+systemctl start iptables.service 
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -I INPUT 1 -i lo -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
+iptables -A INPUT -s 152.66.0.0/16 -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -s 152.66.0.0/16 -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables-save > /etc/iptables/iptables.rules
+
+// For development
+pacman -Syu base-devel linux-odroid-u2
+nano /etc/makepkg.conf // -j4
+
+// sshd logs
+journalctl -u sshd | tail -100
+
+#Colorizied Command Prompt
+nano .bashrc
+PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\] '
+
+pacman -Syu sudo bash-completion git perl-cgi dialog htop wpa_supplicant alsa-utils wpa_actiond//wifi autoconnect
+
+// after installing sudo run visudo as root and add group wheel to sudoers
+
+systemctl enable netctl-auto@wlan0.service
+pacman -Syu odroid-libgl xf86-video-armsoc-odroid odroid-boot-scr
+pacman -Syu xorg-server xorg-server-utils xorg-xinit xorg-twm xterm lightdm lightdm-gtk-greeter xfce4 xfce4-goodies
+// provider for libgl (default): mesa-libgl; provider for xf86-input-driver: xf-86-input-evdev;
+
+systemctl enable lightdm.service
+
+nano .xinitrc // exec xfce4
+
+pacman -S firefox ffmpeg networkmanager chromium kodi pluma
+
+pacman -Syu samba udevil //udisks
+
+nano /etc/samba/smb.conf
+[seagate]
+   comment = Seagate
+   path = /media/seagate
+   valid users = alarm
+   public = no
+   writable = yes
+   printable = no
+
+[data]
+   comment = Data
+   path = /media/Data
+   valid users = alarm
+   public = no
+   writable = yes
+   printable = no
+smbpasswd -a alarm
+testparm
+systemctl enable devmon@alarm.service // next time try only with this
+systemctl enable smbd.service

@@ -1,5 +1,5 @@
-# docker image build -t laslaul/cv-latex:cv-v2.6 .
-# docker run -it laslaul/cv-latex:cv-v2.6
+# docker image build -t laslaul/cv-latex:cv .
+# docker run -it laslaul/cv-latex:cv
 # docker cp 72a6cabec036:/usr/docker/cv.pdf .
 
 # Use the official image as a parent image.

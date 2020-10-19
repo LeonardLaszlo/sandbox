@@ -1,6 +1,10 @@
 # docker image build -t laslaul/cv-latex:cv .
-# docker run -it laslaul/cv-latex:cv
-# docker cp 72a6cabec036:/usr/docker/cv.pdf .
+# docker run -it laslaul/cv-latex
+# or
+# CONTAINER_ID=$( docker run --detach --tty laslaul/cv-latex )
+# docker cp cv.tex "$CONTAINER_ID":/usr/docker/ && docker exec --interactive --tty "$CONTAINER_ID" make xelatex && docker cp "$CONTAINER_ID":/usr/docker/cv.pdf .
+# docker stop "$CONTAINER_ID"
+# docker rm "$CONTAINER_ID"
 
 # Use the official image as a parent image.
 FROM ubuntu:20.04

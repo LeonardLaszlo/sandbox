@@ -15,7 +15,6 @@ alias mong="mongod --config /usr/local/etc/mongod.conf &"
 alias redis="redis-server /usr/local/etc/redis.conf &"
 
 alias w="~/Leonard/GitHub/weather-in-hungary/weather.sh"
-alias sem="~/Leonard/GitHub/sandbox/scripts/is-anyone-in-sem.sh"
 
 # Git
 . ~/Leonard/GitHub/sandbox/bash/.git-completion.bash

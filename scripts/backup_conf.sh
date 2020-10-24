@@ -43,13 +43,13 @@ mkdir $BACKUPDIR
 ## now copy files
 for i in "${FILEARRAY[@]}"
 do
-   cp -v $i $BACKUPDIR
+   cp -v "$i" $BACKUPDIR
 done
 
 ## now copy directories
 for i in "${DIRECTORYARRAY[@]}"
 do
-   cp -r $i $BACKUPDIR
+   cp -r "$i" $BACKUPDIR
 done
 
 # create svn dump

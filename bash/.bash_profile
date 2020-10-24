@@ -14,7 +14,7 @@ alias us="ssh -p 2222 leonard@127.0.0.1"
 alias mong="mongod --config /usr/local/etc/mongod.conf &"
 alias redis="redis-server /usr/local/etc/redis.conf &"
 
-alias w="~/Leonard/GitHub/weather-in-hungary/weather.sh"
+alias w="~/Leonard/GitHub/weather-in-bash/hungary.sh"
 
 # Git
 . ~/Leonard/GitHub/sandbox/bash/.git-completion.bash

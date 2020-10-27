@@ -1,4 +1,6 @@
-SHELL_SESSION_HISTORY=0
+PATH_TO_PROJECTS=~/projects
+
+export SHELL_SESSION_HISTORY=0
 
 export DOCKER_API_VERSION=1.39
 
@@ -14,11 +16,11 @@ alias us="ssh -p 2222 leonard@127.0.0.1"
 alias mong="mongod --config /usr/local/etc/mongod.conf &"
 alias redis="redis-server /usr/local/etc/redis.conf &"
 
-alias w="~/Leonard/GitHub/weather-in-bash/hungary.sh"
+alias w="$PATH_TO_PROJECTS/weather-in-bash/hungary.sh"
 
 # Git
-. ~/Leonard/GitHub/sandbox/bash/.git-completion.bash
-. ~/Leonard/GitHub/sandbox/bash/.git-prompt.sh
+. "$PATH_TO_PROJECTS"/sandbox/bash/.git-completion.bash
+. "$PATH_TO_PROJECTS"/sandbox/bash/.git-prompt.sh
 export GPG_TTY=$(tty)
 # export PS1='\w$(__git_ps1 " (%s)")\$ '
 # export PS1='\n\[\033[38;5;209m\]\u\[\033[m\] at \[\033[38;5;228;1m\]\h\[\033[m\] in \[\033[38;5;42;1m\]\w\[\033[31m\]$(__git_ps1 " (%s)")\[\033[m\]\n\$ '
@@ -28,7 +30,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/
 export PATH=$JAVA_HOME/bin:$PATH
 
 alias ec="/Applications/calibre.app//Contents/ebook-viewer.app/Contents/MacOS/ebook-convert "
-alias dc="~/projects/bash-scripts/docker-clean.sh"
 alias rsc="docker run -d --name sonarqube -p 9000:9000 sonarqube"
 
 # grep -Ril --include \*.java "optionValues()" .
@@ -36,7 +37,7 @@ alias findInJava="grep -Ril --include \*.java"
 alias findInDir="grep -Ril"
 alias f="grep -rnw . -e"
 
-alias e="nano ~/Leonard/GitHub/sandbox/bash/.bash_profile"
+alias e="nano $PATH_TO_PROJECTS/sandbox/bash/.bash_profile"
 alias u="source ~/.bash_profile"
 alias c="clear"
 alias x="exit"

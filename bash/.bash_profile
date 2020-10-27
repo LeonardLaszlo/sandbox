@@ -96,3 +96,8 @@ function mut() {
   mvn clean install -DskipTests=false -DskipITs=true ${@}
   notifyUser ${?}
 }
+
+function mct() {
+  mvn clean install -DskipTests=false -DskipITs=false ${@}
+  notifyUser ${?}
+}

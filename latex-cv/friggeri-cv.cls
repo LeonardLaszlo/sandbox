@@ -178,18 +178,12 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  \small{#1}&\parbox[t]{11.8cm}{%
+  \small{#1}&\parbox[t]{12.3cm}{%
     \textbf{#2}%
     \hfill%
     { \small\addfontfeature{Color=lightgray} #3}\\%
     { \small #4\vspace{\parsep} \vspace{1mm}}%
   }\\}
-  \newcommand{\smallEntry}[3]{%
-    \small{#1}&\parbox[t]{11.8cm}{%
-      \textbf{#2}%
-      \hfill%
-      { \small\addfontfeature{Color=lightgray} #3}\\%
-    }\\}
 
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
@@ -214,5 +208,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}

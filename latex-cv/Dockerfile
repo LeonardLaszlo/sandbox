@@ -14,11 +14,11 @@ WORKDIR /usr/docker
 
 # Copy the files from your host to your current location.
 COPY fonts/ ./fonts
+COPY images/ ./images
 COPY cv.tex .
 COPY fontawesome.sty .
 COPY friggeri-cv.cls .
 COPY Makefile .
-COPY photo.jpg .
 
 # Run the command inside your image filesystem.
 RUN apt-get update

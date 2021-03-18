@@ -26,8 +26,6 @@ export GPG_TTY=$(tty)
 # export PS1='\n\[\033[38;5;209m\]\u\[\033[m\] at \[\033[38;5;228;1m\]\h\[\033[m\] in \[\033[38;5;42;1m\]\w\[\033[31m\]$(__git_ps1 " (%s)")\[\033[m\]\n\$ '
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\e[96m\w\e[93m$(__git_ps1 " %s")\e[0m\n\$ '
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/
-export PATH=$JAVA_HOME/bin:$PATH
 
 alias ec="/Applications/calibre.app//Contents/ebook-viewer.app/Contents/MacOS/ebook-convert "
 alias rsc="docker run -d --name sonarqube -p 9000:9000 sonarqube"
